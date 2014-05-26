@@ -1,0 +1,15 @@
+<div <TMPL_IF ID>id="<TMPL_VAR ID ESCAPE=HTML>"</TMPL_IF> class="feedlink">
+<TMPL_IF RSSURL>
+<a class="feedbutton btn btn-xs btn-warning" type="application/rss+xml" rel="alternate" title="<TMPL_VAR RSSDESC>" href="<TMPL_VAR RSSURL>">
+rss
+<i class="fa fa-rss"></i>
+</a>
+</TMPL_IF>
+<TMPL_IF ATOMURL>
+<a class="feedbutton btn btn-xs btn-warning" type="application/atom+xml" rel="alternate" title="<TMPL_VAR ATOMDESC>" href="<TMPL_VAR ATOMURL>">
+atom
+<i class="fa fa-rss"></i>
+</a>
+</a>
+</TMPL_IF>
+</div>
