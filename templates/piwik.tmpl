@@ -1,0 +1,12 @@
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "<TMPL_VAR PIWIKHTTPSBASEURL>/" : "<TMPL_VAR PIWIKHTTPBASEURL>/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", <TMPL_VAR PIWIKID>);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="<TMPL_VAR PIWIKHTTPSBASEURL>/piwik.php?idsite=<TMPL_VAR PIWIKID>" style="border:0" alt=""/></p></noscript>
+<!-- End Piwik Tag -->
