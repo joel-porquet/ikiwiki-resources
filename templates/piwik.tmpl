@@ -1,12 +1,15 @@
 <!-- Piwik -->
 <script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "<TMPL_VAR PIWIKHTTPSBASEURL>/" : "<TMPL_VAR PIWIKHTTPBASEURL>/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", <TMPL_VAR PIWIKID>);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="<TMPL_VAR PIWIKHTTPSBASEURL>/piwik.php?idsite=<TMPL_VAR PIWIKID>" style="border:0" alt=""/></p></noscript>
-<!-- End Piwik Tag -->
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="<TMPL_VAR PIWIKHTTPSBASEURL>/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', <TMPL_VAR PIWIKID>]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="<TMPL_VAR PIWIKHTTPSBASEURL>/piwik.php?idsite=<TMPL_VAR PIWIKID>" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
